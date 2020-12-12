@@ -17,6 +17,14 @@
     <ion-card>
       <ion-card-content style="text-align: center; font-size: 5rem;">
         {{dweet._with[0].content.umidade}} %
+        <p>
+          <ion-icon name="arrow-up" color="primary"></ion-icon>
+          {{dweet._with[0].content.umidMax}} %
+        </p>
+        <p>
+          <ion-icon name="arrow-down" color="secondary"></ion-icon>
+          {{dweet._with[0].content.umidMin}} %
+        </p>        
       </ion-card-content>
     </ion-card>
 

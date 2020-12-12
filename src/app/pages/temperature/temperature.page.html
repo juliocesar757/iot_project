@@ -18,6 +18,14 @@
     <ion-card>
       <ion-card-content style="text-align: center; font-size: 5rem;">
         {{dweet._with[0].content.temperatura}} ºC
+        <p>
+          <ion-icon name="arrow-up" color="primary"></ion-icon>
+          {{dweet._with[0].content.tempMax}} ºC
+        </p>
+        <p>
+          <ion-icon name="arrow-down" color="secondary"></ion-icon>
+          {{dweet._with[0].content.tempMin}} ºC
+        </p>           
       </ion-card-content>
     </ion-card>
 

@@ -17,6 +17,14 @@
     <ion-card>
       <ion-card-content style="text-align: center; font-size: 5rem;">
         {{dweet._with[0].content.luminosidade}} Lux
+        <p>
+          <ion-icon name="arrow-up" color="primary"></ion-icon>
+          {{dweet._with[0].content.lumMax}} Lux
+        </p>
+        <p>
+          <ion-icon name="arrow-down" color="secondary"></ion-icon>
+          {{dweet._with[0].content.lumMin}} Lux
+        </p>        
       </ion-card-content>
     </ion-card>
 
