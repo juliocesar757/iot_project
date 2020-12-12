@@ -32,6 +32,32 @@ export class DweetService {
     return timeParse
   }
 
+  formatColor(cor: any): string {
+    let color: string = 'white';
+
+    if(cor == 'vermelha') {
+      color = 'red';
+    } else if (cor == 'verde') {
+      color = 'green';
+    } else if (cor == 'azul') {
+      color = 'blue';
+    }
+    
+    return color;
+  }
+
+  statusBuzzer(status_buzzer: any): string {
+    let icon: string = 'volume-off';
+
+    if(status_buzzer == 'false') {
+      icon = 'volume-mute';
+    } else if (status_buzzer == 'true') {
+      icon = 'volume-high';
+    }
+
+    return icon;
+  }
+
   preencherDweet(data: any): Dweet {
     let dweet: Dweet
     let _withs: Array<With>
@@ -52,8 +78,8 @@ export class DweetService {
         _with.content.umidMin,
         _with.content.lumMax,
         _with.content.lumMin,
-        _with.content.current_color,
-        _with.content.status_buzzer,
+        this.formatColor(_with.content.current_color),
+        this.statusBuzzer(_with.content.status_buzzer),
       );
 
       _date = this.formatDate(_with.created)

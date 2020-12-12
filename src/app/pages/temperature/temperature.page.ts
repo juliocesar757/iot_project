@@ -15,7 +15,7 @@ export class TemperaturePage implements OnInit {
   private time: any;
   private dataPlot: Array<any>
   options: Object;
- 
+
   constructor(private dweetService: DweetService, public router: Router) {
     this.time = setInterval(() => {this.getLastDweets()}, 3000)
   }
