@@ -20,4 +20,8 @@ export class HomePage implements OnInit {
   goToLumPage() {
     this.router.navigate(['luminosidade'])
   }
+
+  goToUmiPage() {
+    this.router.navigate(['umidade'])
+  }  
 }
